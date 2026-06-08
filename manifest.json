@@ -1,0 +1,25 @@
+{
+  "manifest_version": "0.2",
+  "name": "spectrum-analyzer-mcp",
+  "version": "0.1.0",
+  "description": "RTL-SDR / TinySA spectrum tools and simulator.",
+  "author": { "name": "Sandra Schipal", "email": "sandra@schipal.at" },
+  "repository": { "type": "git", "url": "https://github.com/sandraschi/spectrum-analyzer-mcp" },
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "server": {
+    "type": "python",
+    "entry_point": "src/spectrum_analyzer_mcp/server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": ["run", "--project", "${__dirname}", "python", "-m", "spectrum_analyzer_mcp"],
+      "env": { "PYTHONUNBUFFERED": "1" }
+    }
+  },
+  "tools": [
+    { "name": "spec_device", "description": "Device discovery and connection" },
+    { "name": "spec_run", "description": "Primary bench operations" },
+    { "name": "spec_help", "description": "Help and quickstart" }
+  ],
+  "compatibility": { "platforms": ["win32", "darwin", "linux"] }
+}

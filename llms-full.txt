@@ -1,0 +1,3 @@
+# spectrum-analyzer-mcp full context
+
+RTL-SDR / TinySA spectrum tools and simulator.

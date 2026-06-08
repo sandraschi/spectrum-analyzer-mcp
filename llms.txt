@@ -1,0 +1,4 @@
+# spectrum-analyzer-mcp
+
+Tools: spec_device, spec_run, spec_help
+Ports: 11007/11008

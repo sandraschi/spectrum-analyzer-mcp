@@ -1,0 +1,17 @@
+{
+  "$schema": "https://glama.ai/schemas/mcp.json",
+  "name": "spectrum-analyzer-mcp",
+  "version": "0.1.0",
+  "description": "RTL-SDR / TinySA spectrum tools and simulator.",
+  "author": "Sandra Schipal",
+  "license": "MIT",
+  "language": "python",
+  "framework": "fastmcp",
+  "type": "mcp_server",
+  "status": "alpha",
+  "transport": ["stdio", "http"],
+  "keywords": ['spectrum', 'rtlsdr', 'tinysa'],
+  "homepage": "https://github.com/sandraschi/spectrum-analyzer-mcp",
+  "ports": { "backend_http": 11007, "frontend_vite": 11008 },
+  "health": { "docs_complete": true, "mcpb_packaged": true, "stdio_safe": true }
+}

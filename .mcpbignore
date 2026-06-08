@@ -1,0 +1,9 @@
+webapp/
+tests/
+docs/
+.github/
+.venv/
+__pycache__/
+glama.json
+llms.txt
+uv.lock
