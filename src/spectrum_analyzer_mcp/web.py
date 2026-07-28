@@ -1,6 +1,9 @@
 from typing import Any
+
 from fastapi import FastAPI
+
 from spectrum_analyzer_mcp import __version__
+
 
 def setup_webapp(app: FastAPI, mcp: Any) -> None:
     @app.get("/health")

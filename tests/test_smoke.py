@@ -9,6 +9,7 @@ def _payload(result) -> dict:
         item = content[0]
         if hasattr(item, "text"):
             import json
+
             return json.loads(item.text)
     raise AssertionError(type(content))
 
@@ -16,8 +17,9 @@ def _payload(result) -> dict:
 @pytest.mark.asyncio
 async def test_help():
     from importlib import import_module
+
     pkg = "spectrum_analyzer_mcp"
     mod = import_module(f"{pkg}.tools")
-    help_fn = getattr(mod, "spec_help")
+    help_fn = mod.spec_help
     r = await help_fn(operation="discover")
     assert _payload(r)["success"] is True

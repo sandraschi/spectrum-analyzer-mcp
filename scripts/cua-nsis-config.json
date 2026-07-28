@@ -1,0 +1,14 @@
+{
+    "product_name": "Spectrum Analyzer MCP",
+    "install_dir": "%LOCALAPPDATA%\\Spectrum Analyzer MCP",
+    "operator_exe": "spectrum-analyzer-mcp-native.exe",
+    "backend_process_names": ["spectrum-analyzer-mcp-native", "spectrum-analyzer-mcp-backend"],
+    "backend_port": 10700,
+    "health_path": "/api/v1/health",
+    "diagnostics_path": "/api/v1/diagnostics",
+    "feature_smoke_path": "/api/v1/system/info",
+    "window_title_re": "Spectrum Analyzer MCP",
+    "nsis_glob": "native/target/release/bundle/nsis/Spectrum Analyzer MCP_*_x64-setup.exe",
+    "bridge_ok_text": "REST bridge reachable",
+    "uninstall_registry_filter": "*Spectrum Analyzer MCP*"
+}
